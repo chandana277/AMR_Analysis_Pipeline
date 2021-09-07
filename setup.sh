@@ -3,7 +3,7 @@
 echo " WELCOME TO CLUSTERING AND ANALAYSIS OF NEIGHBORHOOD GENES"
 echo "Executing requirements.txt"
 
-#pip install -r requirements.txt
+pip install -r requirements.txt
 
 echo "###################################################################################################"
 
