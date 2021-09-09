@@ -693,8 +693,8 @@ for i,j in single_similarity_array_dict.items():
     Single_instance_matrixframe[i]=sim_mat
 
 # Generate a distance matrix and generate UPGMA clusters 
-os.mkdir("UPGMA_single_clusters")
-save_path="UPGMA_single_clusters"
+os.mkdir("Outputs/UPGMA_single_clusters")
+save_path="Outputs/UPGMA_single_clusters"
 dataarray=[]
 hierarchy.set_link_color_palette(['r', 'g', 'y', 'm'])
 matplotlib.rcParams['lines.linewidth'] = 5
@@ -794,8 +794,8 @@ if len(temp_Multiple_instance_blastdatadict.keys())>0:
         Y=sim_mat.values
         multiple_instance_matrixframe[i]=sim_mat
 
-    os.mkdir("UPGMA_multiple_clusters")
-    save_path="UPGMA_multiple_clusters"
+    os.mkdir("Outputs/UPGMA_multiple_clusters")
+    save_path="Outputs/UPGMA_multiple_clusters"
     dataarray=[]
     hierarchy.set_link_color_palette(['r', 'g', 'y', 'm'])
     matplotlib.rcParams['lines.linewidth'] = 5
