@@ -5,7 +5,7 @@ read -p "Please enter the GBK file/files path : " GBK_Path
 python Neighbor_Generator.py ${RGI_Path} ${GBK_Path}
 
 
-cd Multiple_instance
+cd Output/Multiple_instance
 mkdir output_blast_multiple_instance
 for i in *.fasta
 do    
@@ -22,7 +22,7 @@ done
 
 cd "$OLDPWD"
 
-cd Single_instance
+cd Output/Single_instance
 mkdir output_blast_single_instance
 
 for i in *.fasta
