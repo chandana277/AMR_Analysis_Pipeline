@@ -105,7 +105,7 @@ def contigend_visualization(contig_array,end_direction,genome,reverse_term,ident
     #print(RGIgene)
     font_dict={'size':15,'weight':'bold','family':'Helvetica'}
 
-    save_temp_name="All_neighborhoods/"+instancetype+"/"+drugclass
+    save_temp_name="Outputs/All_neighborhoods/"+instancetype+"/"+drugclass
 
     Features=[]
     temp_array_totrack_length=[]   
@@ -634,16 +634,17 @@ for i,j in dict_rgi_single_occurance.items():
 # Find the neighbors and store them in separate dictionaries
 # Visualize each neighborhood and save 
 
-os.mkdir("All_neighborhoods")
-os.mkdir("All_neighborhoods/Multiple_Instance_Neighborhood")
-os.mkdir("All_neighborhoods/Single_Instance_Neighborhood")
+os.mkdir("Outputs")
+os.mkdir("Outputs/All_neighborhoods")
+os.mkdir("Outputs/All_neighborhoods/Multiple_Instance_Neighborhood")
+os.mkdir("Outputs/All_neighborhoods/Single_Instance_Neighborhood")
 
 for eachkey in Dict_multigene_instances.keys():
-    n=os.path.join("All_neighborhoods/Multiple_Instance_Neighborhood/",eachkey)
+    n=os.path.join("Outputs/All_neighborhoods/Multiple_Instance_Neighborhood/",eachkey)
     os.mkdir(n)
     
 for eachkey in Dict_singlegene_instances.keys():
-    n=os.path.join("All_neighborhoods/Single_Instance_Neighborhood/",eachkey)
+    n=os.path.join("Outputs/All_neighborhoods/Single_Instance_Neighborhood/",eachkey)
     os.mkdir(n)
 
 
@@ -713,8 +714,8 @@ for i,j in multipleinstance_neighboringdict_combined_range_10.items():
     Drug_multiple_instance_range_10_genename_dict10[i]=genename_dict_10
         
 # Create separate folders for single and multiple and generate .fasta files containing all genes for each AMR gene model to BLAST #
-os.mkdir("Multiple_instance")
-save_path = 'Multiple_instance/'   
+os.mkdir("Outputs/Multiple_instance")
+save_path = 'Outputs/Multiple_instance/'   
 
 for i,j in multipleinstance_neighboringdict_combined_range_10.items():
     
@@ -730,8 +731,8 @@ for i,j in multipleinstance_neighboringdict_combined_range_10.items():
     filef.close()
 
 
-os.mkdir("Single_instance")
-save_path = 'Single_instance/'   
+os.mkdir("Outputs/Single_instance")
+save_path = 'Outputs/Single_instance/'   
 
 for i,j in singleinstance_neighboringdict_combined_range10.items():
     name=i+".fasta"
