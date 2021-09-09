@@ -1,9 +1,15 @@
-#!/bin/bash
+##!/bin/bash
 
 echo " WELCOME TO CLUSTERING AND ANALAYSIS OF NEIGHBORHOOD GENES"
+
+echo "Creating a new environment to install all the requirements"	
+conda create -n new_pipeline_env_test python=3.8
+conda activate new_pipeline_env_test
+
+
 echo "Executing requirements.txt"
 
-pip install -r requirements.txt
+pip install -r ./requirements.txt
 
 echo "###################################################################################################"
 
@@ -25,5 +31,7 @@ case ${option} in
       
   
 esac 	
-		
 
+echo " Program completeted. Deactivating virtual environment" 
+
+conda deactivate 
