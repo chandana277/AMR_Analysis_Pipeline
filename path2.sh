@@ -53,7 +53,7 @@ cd "$OLDPWD"
 python Neighbor_Generator.py ${Fna_Path_RGI_Annotation}/allrgisrequired ${Fna_Path_RGI_Annotation}/allgbksrequired
 
 
-cd Multiple_instance
+cd Output/Multiple_instance
 mkdir output_blast_multiple_instance
 for i in *.fasta
 do    
@@ -70,7 +70,7 @@ done
 
 cd "$OLDPWD"
 
-cd Single_instance
+cd Output/Single_instance
 mkdir output_blast_single_instance
 
 for i in *.fasta
@@ -90,7 +90,4 @@ done
 cd "$OLDPWD"
 
 python Clusters_Generator.py ${Fna_Path_RGI_Annotation}/allrgisrequired ${Fna_Path_RGI_Annotation}/allgbksrequired Single_instance/output_blast_single_instance Multiple_instance/output_blast_multiple_instance
-
-
-
 
