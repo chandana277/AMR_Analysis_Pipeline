@@ -21,11 +21,15 @@ Steps to run the pipeline on local genomes:
 
 
 *********** Important Information *************
+
 1> Please use source to execute setup.sh
+
 2> To use option 1 of the pipeline,please make sure you have the below softwares installed.
+
     BLAST 2.9.0
     
 3> To use option 2 of the pipeline, please make sure you have the below softwares installed.
+
     Prokka 1.14.6
     RGI 4.2.2
     BLAST 2.9.0
